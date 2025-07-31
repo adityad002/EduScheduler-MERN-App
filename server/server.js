@@ -13,6 +13,8 @@ const classroomRoutes = require('./routes/classroomRoutes');
 const facultyRoutes = require('./routes/facultyRoutes');
 const settingsRoutes = require('./routes/settingsRoutes');
 const timetableRoutes = require('./routes/timetableRoutes');
+const dashboardRoutes = require('./routes/dashboardRoutes');
+
 
 const app = express();
 
@@ -27,6 +29,7 @@ app.use('/api/classrooms', classroomRoutes);
 app.use('/api/faculty', facultyRoutes);
 app.use('/api/settings', settingsRoutes);
 app.use('/api/timetable', timetableRoutes);
+app.use('/api/dashboard', dashboardRoutes);
 
 // DB Connection
 const MONGO_URI = process.env.MONGO_URI;
